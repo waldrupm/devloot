@@ -1,0 +1,36 @@
+Design:
+  ✔ Browse page @done(20-08-01 19:58)
+  ✔ Filter UI interactions in AlpineJS @done(20-08-01 19:59)
+  ✔ Finish feature page @done(20-08-01 20:00)
+  ✔ Individual asset page @done(20-08-03 12:16)
+  ✔ "My Collection" page @done(20-08-03 15:05)
+  ✔ Login page @done(20-08-03 15:16)
+  ☐ Contribute Page
+  ☐ Profile page @defer
+  ☐ Change star rating everywhere to list main tag, this will help contributors stay encouraged. Ratings are better left on a platform that sells things for money.
+  ☐ Add donate section to individual asset pages
+  ☐ Remove Contributor packs section and links as future feature, not on initial release.
+  ☐ Remove download icon from all search / browse / index components. I don't want people spam downloading everything just because it's easy. Have to keep costs in mind.
+  ☐ When someone is contributing, make sure they're aware the assets will also be hosted on github for easy downloading.
+  ☐ Asset types - 3d 2d add-ons rigged models essentials GUI templates sounds Tools VFX
+  ☐ Filter functionality in AlpineJS
+  ☐ Figure out licensing
+  ☐ Change folder icon to heart icon in all pages. We want favoriting and returning, not hoarding.
+
+Planning:
+  ✔ Model data @done(20-08-04 15:37)
+  ☐ Scaffold project
+
+Data Models:
+  ☐ Asset
+  ☐ User
+  ☐ Image
+  ☐ Type
+  ☐ Tag
+  ☐ Donation
+  ☐ FeaturedSet
+
+Engineering:
+  ☐ List features
+
+Bugs:
