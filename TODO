@@ -12,14 +12,14 @@ Design:
   ☐ Remove Contributor packs section and links as future feature, not on initial release.
   ☐ Remove download icon from all search / browse / index components. I don't want people spam downloading everything just because it's easy. Have to keep costs in mind.
   ☐ When someone is contributing, make sure they're aware the assets will also be hosted on github for easy downloading.
-  ☐ Asset types - 3d 2d add-ons rigged models essentials GUI templates sounds Tools VFX
+  ☐ Asset types - 3d 2d add-ons rigged models essentials GUI templates audio Tools VFX
   ☐ Filter functionality in AlpineJS
   ☐ Figure out licensing
   ☐ Change folder icon to heart icon in all pages. We want favoriting and returning, not hoarding.
 
 Planning:
   ✔ Model data @done(20-08-04 15:37)
-  ☐ Scaffold project
+  ✔ Scaffold project @done(20-08-04 19:14)
 
 Data Models:
   ☐ Asset
