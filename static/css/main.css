@@ -1,0 +1,12 @@
+i.fa-lead {
+    color: #fbcb36;
+  }
+  i.fa-lead:hover {
+    color: #f5e2a8;
+  }
+  
+  .search-icon {
+    padding: 10px;
+    min-width: 50px;
+    color: #fbcb36;
+  }

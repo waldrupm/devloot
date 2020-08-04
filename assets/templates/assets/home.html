@@ -1,0 +1,213 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/tailwind.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <title>Design</title>
+</head>
+
+<body class="antialiased bg-page-bg text-white">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <div class="w-full text-gray-200 bg-nav-bg">
+        <div x-data="{ open: false }"
+            class="flex flex-col container px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+            <div class="py-4 flex flex-row items-center justify-between">
+                <a href="#"
+                    class="text-lg font-semibold tracking-widest text-gray-200 uppercase rounded-lg focus:outline-none focus:shadow-outline">ProjectName</a>
+                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}"
+                class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-accent-yellow focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="#">Browse</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-accent-yellow focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="#">Featured</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-accent-yellow focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="#">Contributor Packs</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-accent-yellow focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="#">Login / Logout</a>
+            </nav>
+        </div>
+        <div class="container px-4 mx-auto md:px-6 lg:px-8">
+                <i class="fas fa-search absolute z-10 search-icon" aria-hidden="true"></i>
+                <input class="w-full bg-card-bg outline-none h-10 text-white pl-10 mb-3 rounded-lg relative" type="text"
+                    name="search" id="search" />
+        </div>
+    </div>
+    <div class="container mx-auto mt-4 flex px-2 md:px-4 lg:px-6">
+        <div class="w-full md:w-2/3 md:pr-2 flex flex-wrap xl:w-3/4">
+            <div class="w-full mt-2 px-2 xl:w-2/3">
+                <a href="feature.html"><img class="" src="https://via.placeholder.com/1200x800/3d70ff/FFFFFF?text=Featured+Section" alt=""></a>
+            </div>
+            <div class="w-1/2 mt-4 px-2 xl:hidden">
+                <a href="search.html"><img class="" src="https://via.placeholder.com/1200x800/3d70ff/FFFFFF?text=Search+Section" alt=""></a>
+            </div>
+            <div class="w-1/2 mt-4 px-2 xl:hidden">
+                <img class="" src="https://via.placeholder.com/1200x800/3d70ff/FFFFFF?text=Featured+Section" alt="">
+            </div>
+            <div class="hidden xl:flex xl:flex-col xl:w-1/3 xl:mt-2 xl:h-auto justify-between">
+                <div class="w-full px-2">
+                    <img class="" src="https://via.placeholder.com/1200x800/3d70ff/FFFFFF?text=Featured+Section" alt="">
+                </div>
+                <div class="w-full px-2">
+                    <img class="" src="https://via.placeholder.com/1200x800/3d70ff/FFFFFF?text=Featured+Section" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:block md:w-1/3 md:pl-3 text-white xl:w-1/4">
+            <div class="border-b border-opacity-25 border-white pb-2 md:flex md:justify-between md:items-start">
+                <h3 class="inline text-lg">Filter by</h3>
+                <a class="text-accent-yellow" href="#"><span>clear filters</span></a>
+            </div>
+            <div class="w-full flex-col mt-3">
+                <div class="w-full flex items-center mt-2">
+                    <button class="h-4 w-4 border rounded border-gray-300 mr-2"></button>
+                    <div class="h-6 text-gray-100">Asset Type</div>
+                </div>
+                <div class="w-full flex items-center mt-2">
+                    <button class="h-4 w-4 border rounded border-gray-300 mr-2"></button>
+                    <div class="h-6 text-gray-100">Asset Type</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto px-6 lg:px-8 mt-8">
+        <h2 class="text-xl font-semibold tracking-widest text-gray-200 uppercase mb-2">Popular</h2>
+    </div>
+    <div class="container px-4 mx-auto lg:px-6 flex flex-wrap">
+        <div class="w-1/2 h-auto rounded-lg overflow-hidden px-1 md:px-2 text-gray-400 pb-3 mb-3 lg:w-1/3 xl:w-1/4">
+            <img src="https://via.placeholder.com/500x300/ffd437/000000?text=Individual+Item" alt="Item text">
+            <h3 class="text-gray-500 text-sm uppercase tracking-wide font-semibold mt-3">Contributor Name</h3>
+            <h2 class="text-gray-100 truncate text-lg">Asset Name that can be a little longer</h2>
+            <div class="mt-2 flex justify-between items-center">
+                <div class="w-2/3">
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <span class="text-sm">(##)</span>
+                </div>
+                <div class="w-1/3 pr-2 text-right">
+                        <a href="#"><i class="fas fa-download fa-lead text-sm mx-2" aria-hidden="true"></i></a>
+                        <a href=""><i class="fas fa-folder fa-lead text-sm mx-2" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="w-1/2 h-auto rounded-lg overflow-hidden px-1 md:px-2 text-gray-400 pb-3 mb-3 lg:w-1/3 xl:w-1/4">
+            <img src="https://via.placeholder.com/500x300/12181f/FFFFFF?text=Individual+Item" alt="Item text">
+            <h3 class="text-gray-500 text-sm uppercase tracking-wide font-semibold mt-3">Contributor Name</h3>
+            <h2 class="text-gray-100 truncate text-lg">Asset Name that can be a little longer</h2>
+            <div class="mt-2 flex justify-between items-center">
+                <div class="w-2/3">
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <span class="text-sm">(##)</span>
+                </div>
+                <div class="w-1/3 pr-2 text-right">
+                        <a href="#"><i class="fas fa-download fa-lead text-sm mx-2" aria-hidden="true"></i></a>
+                        <a href=""><i class="fas fa-folder fa-lead text-sm mx-2" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="w-1/2 h-auto rounded-lg overflow-hidden px-1 md:px-2 text-gray-400 pb-3 mb-3 lg:w-1/3 xl:w-1/4">
+            <img src="https://via.placeholder.com/500x300/7a3b58/FFFFFF?text=Individual+Item" alt="Item text">
+            <h3 class="text-gray-500 text-sm uppercase tracking-wide font-semibold mt-3">Contributor Name</h3>
+            <h2 class="text-gray-100 truncate text-lg">Asset Name that can be a little longer</h2>
+            <div class="mt-2 flex justify-between items-center">
+                <div class="w-2/3">
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <span class="text-sm">(##)</span>
+                </div>
+                <div class="w-1/3 pr-2 text-right">
+                        <a href="#"><i class="fas fa-download fa-lead text-sm mx-2" aria-hidden="true"></i></a>
+                        <a href=""><i class="fas fa-folder fa-lead text-sm mx-2" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="w-1/2 h-auto rounded-lg overflow-hidden px-1 md:px-2 text-gray-400 pb-3 mb-3 lg:w-1/3 xl:w-1/4">
+            <img src="https://via.placeholder.com/500x300/FFFFFF/000000?text=Individual+Item" alt="Item text">
+            <h3 class="text-gray-500 text-sm uppercase tracking-wide font-semibold mt-3">Contributor Name</h3>
+            <h2 class="text-gray-100 truncate text-lg">Asset Name that can be a little longer</h2>
+            <div class="mt-2 flex justify-between items-center">
+                <div class="w-2/3">
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <i class="fas fa-star text-xs" aria-hidden="true"></i>
+                    <span class="text-sm">(##)</span>
+                </div>
+                <div class="w-1/3 pr-2 text-right">
+                        <a href="#"><i class="fas fa-download fa-lead text-sm mx-2" aria-hidden="true"></i></a>
+                        <a href=""><i class="fas fa-folder fa-lead text-sm mx-2" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="w-full text-gray-200 bg-nav-bg mt-8">
+        <div class="container px-4 mx-auto md:px-6 lg:px-12 text-center p-4">
+          <h2 class="text-lg font-semibold tracking-widest text-gray-200 uppercase rounded-lg focus:outline-none focus:shadow-outline pb-2 border-b border-accent-yellow border-opacity-50"><a href="#">ProjectName</a></h2>
+          <div class="w-full flex flex-wrap">
+            <div class="w-full text-center md:w-1/3 md:order-2 md:pt-5">
+              <a class="block px-4 py-1 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-accent-yellow focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="#">Browse</a>
+              <a class="block px-4 py-1 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-accent-yellow focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="#">Featured</a>
+              <a class="block px-4 py-1 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-accent-yellow focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="#">Contributor Packs</a>
+              <a class="block px-4 py-1 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-accent-yellow focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="#">Login / Logout</a>
+            </div>
+            <div class="w-full text-left md:w-1/3 md:order-1">
+              <h3 class="pt-5 font-semibold">Categories:</h3>
+              <a href="#" class="text-accent-yellow mr-2">Asset Type</a>
+              <a href="#" class="text-accent-yellow mr-2">Asset Type</a>
+              <a href="#" class="text-accent-yellow mr-2">Asset Type</a>
+              <a href="#" class="text-accent-yellow mr-2">Asset Type</a>
+              <a href="#" class="text-accent-yellow mr-2">Asset Type</a>
+              <a href="#" class="text-accent-yellow mr-2">Asset Type</a>
+              <a href="#" class="text-accent-yellow mr-2">Asset Type</a>
+              <a href="#" class="text-accent-yellow mr-2">Asset Type</a>
+              <a href="#" class="text-accent-yellow mr-2">Asset Type</a>
+            </div>
+            <div class="w-full text-left md:w-1/3 md:order-3">
+              <h3 class="pt-5">Recently Featured</h3>
+              <a href="#" class="text-accent-yellow mr-2">Featured Pack</a>
+              <a href="#" class="text-accent-yellow mr-2">Featured Pack</a>
+              <a href="#" class="text-accent-yellow mr-2">Featured Pack</a>
+              <a href="#" class="text-accent-yellow mr-2">Featured Pack</a>
+              <a href="#" class="text-accent-yellow mr-2">Featured Pack</a>
+              <a href="#" class="text-accent-yellow mr-2">Featured Pack</a>
+              <a href="#" class="text-accent-yellow mr-2">Featured Pack</a>
+              <a href="#" class="text-accent-yellow mr-2">Featured Pack</a>
+              <a href="#" class="text-accent-yellow mr-2">Featured Pack</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+</body>
+
+</html>
