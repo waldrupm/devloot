@@ -20,7 +20,13 @@ class Asset(models.Model):
     creation_date = models.DateTimeField(auto_now_add=True, null=True)
     moved_to_general = models.DateTimeField(null=True)
 
+    def __str__(self):
+        return f"Asset: {self.name} - {self.id}"
+
 
 class Tag(models.Model):
     name = models.CharField(max_length=30, null=True)
     description = models.TextField(max_length=600, blank=True)
+
+    def __str__(self):
+        return f"Tag: {self.name}"
