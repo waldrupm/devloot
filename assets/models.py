@@ -15,7 +15,12 @@ class Asset(models.Model):
         ('vfx', 'VFX'),
     ]
     name = models.CharField(max_length=200, null=True)
-    description = models.CharField(max_length=200, null=True)
+    description = models.TextField(max_length=600, null=True)
     asset_type = models.CharField(max_length=25, choices=TYPE_CHOICES, null=True)
     creation_date = models.DateTimeField(auto_now_add=True, null=True)
     moved_to_general = models.DateTimeField(null=True)
+
+
+class Tag(models.Model):
+    name = models.CharField(max_length=30, null=True)
+    description = models.TextField(max_length=600, blank=True)
