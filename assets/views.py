@@ -7,5 +7,6 @@ from django.views.generic import ListView, DetailView
 class AssetList(ListView):
     model = Asset
 
+
 class AssetDetail(DetailView):
     model = Asset
