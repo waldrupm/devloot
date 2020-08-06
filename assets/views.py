@@ -1,13 +1,11 @@
 from django.shortcuts import render
 from .models import Asset
+from django.views.generic import ListView, DetailView
 
 
 # Create your views here.
-def home(request):
-    assets = Asset.objects.all()
-    context = {'assets': assets}
-    return render(request, 'assets/home.html', context=context)
+class AssetList(ListView):
+    model = Asset
 
-
-def single_asset(request):
-    return render(request, 'assets/single.html')
+class AssetDetail(DetailView):
+    model = Asset

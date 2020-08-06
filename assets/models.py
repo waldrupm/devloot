@@ -15,10 +15,13 @@ class Asset(models.Model):
         ('vfx', 'VFX'),
     ]
     name = models.CharField(max_length=200, null=True)
-    description = models.TextField(max_length=600, null=True)
+    description = models.TextField(max_length=800, null=True)
     asset_type = models.CharField(max_length=25, choices=TYPE_CHOICES, null=True)
     creation_date = models.DateTimeField(auto_now_add=True, null=True)
-    moved_to_general = models.DateTimeField(null=True)
+    moved_to_general = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        ordering = ('-creation_date', 'name')
 
     def __str__(self):
         return f"Asset: {self.name} - {self.id}"

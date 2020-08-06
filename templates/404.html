@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block title %}
+    Not Found
+{% endblock %}
+
+{% block content %}
+    
+    <h1 class="text-lg text-accent-yellow">Not Found</h1>
+    <p>Sorry, that page was not found, go <a href="{% url 'assets:AssetList' %}">Home</a></p>
+    
+{% endblock %}

@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="{% static "css/tailwind.css" %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <link rel="stylesheet" href="{% static "css/main.css" %}">
-    <title>DevLoot</title>
+    <title>{% block title %}DevLoot{% endblock %}</title>
 </head>
 
 <body class="antialiased bg-page-bg text-white">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    {% include 'assets/navbar.html' %}
+    {% include './navbar.html' %}
 
     {% block content %}
 
     {% endblock %}
     
-    {% include 'assets/footer.html' %}
+    {% include './footer.html' %}
 
 </body>
 
