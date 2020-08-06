@@ -7,12 +7,12 @@ Design:
   ✔ Login page @done(20-08-03 15:16)
   ☐ Contribute Page
   ☐ Profile page @defer
-  ☐ Change star rating everywhere to list main tag, this will help contributors stay encouraged. Ratings are better left on a platform that sells things for money.
+  ✔ Change star rating everywhere to list main tag, this will help contributors stay encouraged. Ratings are better left on a platform that sells things for money. @done(20-08-06 13:45)
   ☐ Add donate section to individual asset pages
   ☐ Remove Contributor packs section and links as future feature, not on initial release.
   ☐ Remove download icon from all search / browse / index components. I don't want people spam downloading everything just because it's easy. Have to keep costs in mind.
   ☐ When someone is contributing, make sure they're aware the assets will also be hosted on github for easy downloading.
-  ☐ Asset types - 3d 2d add-ons rigged models essentials GUI templates audio Tools VFX
+  ✔ Asset types - 3d 2d add-ons rigged models essentials GUI templates audio Tools VFX @done(20-08-06 13:45)
   ☐ Filter functionality in AlpineJS
   ☐ Figure out licensing
   ☐ Change folder icon to heart icon in all pages. We want favoriting and returning, not hoarding.
@@ -32,7 +32,15 @@ Data Models:
   ☐ FeaturedSet
 
 Engineering:
-  ☐ List features
+  ☐ User can browse a list of all assets on the main page
+  ☐ User can see paginated results on relevant pages
+  ☐ User sees "featured pack" on the main page
+  ☐ User can check out the featured pack on its own page
+  ☐ User can see details of a specific asset
+  ☐ User can login, logout, and register
+  ☐ User can edit their profile
+  ☐ User can add assets to their collection for keeping track of favorites
+  
 
 Bugs:
   ☐ Increase character limit for asset description
