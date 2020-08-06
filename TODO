@@ -16,6 +16,7 @@ Design:
   ☐ Filter functionality in AlpineJS
   ☐ Figure out licensing
   ☐ Change folder icon to heart icon in all pages. We want favoriting and returning, not hoarding.
+  ☐ "Related Tags" on single asset pages should be links to browse by tag
 
 Planning:
   ✔ Model data @done(20-08-04 15:37)
@@ -43,4 +44,4 @@ Engineering:
   
 
 Bugs:
-  ☐ Increase character limit for asset description
+  ✔ Increase character limit for asset description @done(20-08-06 19:16)
