@@ -1,9 +1,12 @@
 from django.shortcuts import render
+from .models import Asset
 
 
 # Create your views here.
 def home(request):
-    return render(request, 'assets/home.html')
+    assets = Asset.objects.all()
+    context = {'assets': assets}
+    return render(request, 'assets/home.html', context=context)
 
 
 def single_asset(request):
