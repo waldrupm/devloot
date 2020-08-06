@@ -55,28 +55,13 @@
         </div>
         <div class="w-full flex flex-wrap">
             <h3 class="w-full text-xl tracking-wider text-accent-yellow mt-3 mb-1">Related Tags</h3>
-            <button
-                class="p-1 m-2 border-gray-200 border tracking-wide rounded hover:bg-gray-200 hover:text-gray-800">Tag
-                Word Here</button>
-            <button
-                class="p-1 m-2 border-gray-200 border tracking-wide rounded hover:bg-gray-200 hover:text-gray-800">Tag</button>
-            <button
-                class="p-1 m-2 border-gray-200 border tracking-wide rounded hover:bg-gray-200 hover:text-gray-800">Functionality</button>
-            <button
-                class="p-1 m-2 border-gray-200 border tracking-wide rounded hover:bg-gray-200 hover:text-gray-800">Easy
-                Setup</button>
-            <button
-                class="p-1 m-2 border-gray-200 border tracking-wide rounded hover:bg-gray-200 hover:text-gray-800">Utility</button>
-            <button
-                class="p-1 m-2 border-gray-200 border tracking-wide rounded hover:bg-gray-200 hover:text-gray-800">Workflow</button>
-            <button
-                class="p-1 m-2 border-gray-200 border tracking-wide rounded hover:bg-gray-200 hover:text-gray-800">Tool</button>
-            <button
-                class="p-1 m-2 border-gray-200 border tracking-wide rounded hover:bg-gray-200 hover:text-gray-800">Node</button>
-            <button
-                class="p-1 m-2 border-gray-200 border tracking-wide rounded hover:bg-gray-200 hover:text-gray-800">Editor</button>
-            <button
-                class="p-1 m-2 border-gray-200 border tracking-wide rounded hover:bg-gray-200 hover:text-gray-800">System</button>
+            {% for tag in object.tags.all %}
+                <button
+                    class="p-1 m-2 border-gray-200 border tracking-wide rounded hover:bg-gray-200 hover:text-gray-800">{{tag.name}}</button>
+
+            {% empty %}
+                <span>No tags associated with this asset</span>
+            {% endfor %}
         </div>
 
     </div>

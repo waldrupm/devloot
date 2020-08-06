@@ -8,11 +8,11 @@
         {% for asset in object_list %}
             <div class="w-1/2 h-auto rounded-lg overflow-hidden px-1 md:px-2 text-gray-400 pb-3 mb-4 lg:w-1/3 xl:w-1/4">
                 <img src="https://via.placeholder.com/500x300/ffd437/000000?text=Individual+Item" alt="Item text">
-                <h3 class="text-gray-500 text-sm uppercase tracking-wide font-semibold mt-3">Contributor Name</h3>
+                <h3 class="text-gray-500 text-xs uppercase tracking-wide font-semibold mt-3">Contributor Name</h3>
                 <h2 class="text-gray-100 truncate text-lg"><a href="{% url 'assets:AssetDetail' pk=asset.id %}">{{asset.name}}</a></h2>
                 <div class="mt-2 flex justify-between items-center">
                     <div class="w-2/3">
-                        <span>tags</span>
+                        <span class="text-xs italic font-light">{% for tag in asset.tags.all %}{{tag.name}} {% empty %}No Tags{% endfor %}</span>
                     </div>
                     <div class="w-1/3 pr-2 text-right">
                             <a href=""><i class="fas fa-heart fa-lead mx-2" aria-hidden="true"></i></a>
