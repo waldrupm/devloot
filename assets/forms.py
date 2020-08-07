@@ -18,10 +18,3 @@ class CreateUserForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
-
-
-class LoginForm(AuthenticationForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['username'].widget.attrs.update({'class': 'shadow border rounded w-full py-2 px-3 text-gray-800 mb-3'})
-        self.fields['password'].widget.attrs.update({'class': 'shadow border rounded w-full py-2 px-3 text-gray-800 mb-3'})
