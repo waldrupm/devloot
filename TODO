@@ -19,7 +19,7 @@ Design:
   ☐ "Related Tags" on single asset pages should be links to browse by tag
   ☐ Fix footer links to point to right places
   ☐ Make users unique by email vice username, register / login via email not username
-  ☐ Style registration and login forms by id, re-build tailwind using @apply
+  ✔ Style registration and login forms by id, re-build tailwind using @apply @done(20-08-07 09:50)
 
 Planning:
   ✔ Model data @done(20-08-04 15:37)
@@ -28,7 +28,7 @@ Planning:
 
 Data Models:
   ✔ Asset @done(20-08-06 19:30)
-  ☐ User
+  ✔ User @done(20-08-07 09:50)
   ☐ Image
   ☐ Type
   ✔ Tag @done(20-08-06 19:30)
@@ -48,4 +48,3 @@ Engineering:
 
 Bugs:
   ✔ Increase character limit for asset description @done(20-08-06 19:16)
-  ☐ user.profile.email not being properly set
