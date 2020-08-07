@@ -19,6 +19,7 @@ Design:
   ☐ "Related Tags" on single asset pages should be links to browse by tag
   ☐ Fix footer links to point to right places
   ☐ Make users unique by email vice username, register / login via email not username
+  ☐ Style registration and login forms by id, re-build tailwind using @apply
 
 Planning:
   ✔ Model data @done(20-08-04 15:37)
