@@ -4,6 +4,9 @@ from . import views
 
 app_name = "assets"
 urlpatterns = [
-    path("", views.AssetList.as_view(), name="AssetList"),
+    path('register/', views.registerPage, name='register'),
+    path('login/', views.loginPage, name='login'),
+    
+    path("", views.AssetList.as_view(), name="home"),
     path("asset/<int:pk>", views.AssetDetail.as_view(), name="AssetDetail"),
 ]

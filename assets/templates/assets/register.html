@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+
+{% block title %}
+    Register - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <div class="container mx-auto px-6 lg:px-8 mt-8 text-center">
+        <h1>Register</h1>
+        <div class="bg-card-bg shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col md:w-1/2 xl:w-1/3 md:mx-auto">
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <p class="text-xs text-red-200">{{ error }}</p>
+                {% endfor %}
+            {% endfor %}
+            <form method="POST">
+                {% csrf_token %}
+                <div class="mb-4 text-left">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
+                    Username
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-2" id="username" type="text" placeholder="Username">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
+                    Email
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" type="text" placeholder="Email">
+                </div>
+                <div class="mb-6 text-left">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="password1">
+                    Password
+                </label>
+                <input class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" id="password1" type="password" placeholder="******************">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="password2">
+                    Password Confirmation
+                </label>
+                <input class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" id="password2" type="password" placeholder="******************">
+                {% comment %} <p class="text-xs italic">Please choose a password.</p> {% endcomment %}
+                </div>
+                <div class="flex items-center justify-between">
+                <button class="bg-white hover:bg-accent-yellow hover:text-black text-gray-700 font-bold py-2 px-4 rounded" type="submit">
+                    Register
+                </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

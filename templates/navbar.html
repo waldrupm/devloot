@@ -2,7 +2,7 @@
     <div x-data="{ open: false }"
         class="flex flex-col container px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
         <div class="py-4 flex flex-row items-center justify-between">
-            <a href="{% url 'assets:AssetList' %}"
+            <a href="{% url 'assets:home' %}"
                 class="text-lg font-semibold tracking-widest text-gray-200 uppercase rounded-lg focus:outline-none focus:shadow-outline">ProjectName</a>
             <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -18,13 +18,13 @@
         <nav :class="{'flex': open, 'hidden': !open}"
             class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
             <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-accent-yellow focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                href="{% url 'assets:AssetList' %}">Browse</a>
+                href="{% url 'assets:home' %}">Browse</a>
             <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-accent-yellow focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="#">Featured</a>
             <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-accent-yellow focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="#">Contributor Packs</a>
             <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-accent-yellow focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                href="#">Login / Logout</a>
+                href="{% url 'assets:login' %}">Login | Register</a>
         </nav>
     </div>
     <div class="container px-4 mx-auto md:px-6 lg:px-8">

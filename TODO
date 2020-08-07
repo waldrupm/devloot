@@ -17,6 +17,8 @@ Design:
   ☐ Figure out licensing
   ☐ Change folder icon to heart icon in all pages. We want favoriting and returning, not hoarding.
   ☐ "Related Tags" on single asset pages should be links to browse by tag
+  ☐ Fix footer links to point to right places
+  ☐ Make users unique by email vice username, register / login via email not username
 
 Planning:
   ✔ Model data @done(20-08-04 15:37)
@@ -24,20 +26,20 @@ Planning:
   ☐ Refresh Git branching techniques
 
 Data Models:
-  ☐ Asset
+  ✔ Asset @done(20-08-06 19:30)
   ☐ User
   ☐ Image
   ☐ Type
-  ☐ Tag
+  ✔ Tag @done(20-08-06 19:30)
   ☐ Donation
   ☐ FeaturedSet
 
 Engineering:
-  ☐ User can browse a list of all assets on the main page
+  ✔ User can browse a list of all assets on the main page @done(20-08-06 19:30)
   ☐ User can see paginated results on relevant pages
   ☐ User sees "featured pack" on the main page
   ☐ User can check out the featured pack on its own page
-  ☐ User can see details of a specific asset
+  ✔ User can see details of a specific asset @done(20-08-06 19:30)
   ☐ User can login, logout, and register
   ☐ User can edit their profile
   ☐ User can add assets to their collection for keeping track of favorites
