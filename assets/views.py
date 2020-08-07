@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Asset
 from django.views.generic import ListView, DetailView
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 
 from .forms import CreateUserForm
 
@@ -35,3 +35,7 @@ def registerPage(request):
 def loginPage(request):
     context = {}
     return render(request, 'assets/login.html', context)
+
+def logoutPage(request):
+    logout(request)
+    return redirect('assets:home')

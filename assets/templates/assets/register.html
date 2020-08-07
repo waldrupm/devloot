@@ -19,21 +19,21 @@
                 <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
                     Username
                 </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-2" id="username" type="text" placeholder="Username">
+                {{ form.username }}
                 <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
                     Email
                 </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" type="text" placeholder="Email">
+                {{ form.email }}
                 </div>
                 <div class="mb-6 text-left">
                 <label class="block text-grey-darker text-sm font-bold mb-2" for="password1">
                     Password
                 </label>
-                <input class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" id="password1" type="password" placeholder="******************">
+                {{ form.password1 }}
                 <label class="block text-grey-darker text-sm font-bold mb-2" for="password2">
                     Password Confirmation
                 </label>
-                <input class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" id="password2" type="password" placeholder="******************">
+                {{ form.password2 }}
                 {% comment %} <p class="text-xs italic">Please choose a password.</p> {% endcomment %}
                 </div>
                 <div class="flex items-center justify-between">
