@@ -8,6 +8,7 @@ from .forms import CreateUserForm
 
 # Create your views here.
 class AssetList(ListView):
+    paginate_by = 10
     model = Asset
 
 
