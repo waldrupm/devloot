@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Asset
+from .models import Asset, FeaturedSet
 from django.views.generic import ListView, DetailView
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
@@ -11,6 +11,12 @@ from .forms import CreateUserForm
 class AssetList(ListView):
     paginate_by = 10
     model = Asset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context['featured_set'] = FeaturedSet.objects.filter(status='active').first()
+        return context
 
 
 class AssetDetail(DetailView):
