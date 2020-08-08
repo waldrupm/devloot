@@ -60,3 +60,23 @@ class Asset(models.Model):
 
     def __str__(self):
         return f"Asset: {self.name} - {self.id}"
+
+
+class FeaturedSet(models.Model):
+    STATUS_CHOICES = [
+        ('active', 'Active'),
+        ('expired', 'Expired'),
+        ('ready', 'Ready'),
+        ('building', 'Building'),
+    ]
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, null=True)
+    description = models.TextField(max_length=700, null=True)
+    active_date = models.DateTimeField(null=True, blank=True)
+    creation_date = models.DateTimeField(auto_now_add=True, null=True)
+    assets = models.ManyToManyField(Asset)
+
+    class Meta:
+        ordering = ('-creation_date', 'status')
+    
+    def __str__(self):
+        return f"FeaturedSet: {self.creation_date} - {self.id}"

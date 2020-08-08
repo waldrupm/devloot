@@ -33,7 +33,7 @@ Data Models:
   ☐ Type
   ✔ Tag @done(20-08-06 19:30)
   ☐ Donation
-  ☐ FeaturedSet
+  ✔ FeaturedSet @done(20-08-07 20:19)
 
 Engineering:
   ✔ User can browse a list of all assets on the main page @done(20-08-06 19:30)
