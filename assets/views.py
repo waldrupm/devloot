@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Asset
 from django.views.generic import ListView, DetailView
 from django.contrib.auth import login, authenticate, logout
+from django.contrib import messages
 
 from .forms import CreateUserForm
 
@@ -27,6 +28,7 @@ def registerPage(request):
         password = form.cleaned_data.get('password1')
         user = authenticate(username=username, password=password)
         login(request, user)
+        messages.success(request, 'User Created')
         return redirect('assets:home')
     else:
         form = CreateUserForm()
@@ -41,6 +43,8 @@ def loginPage(request):
         if user is not None:
             login(request, user)
             return redirect('assets:home')
+        else:
+            messages.info(request, 'Username / password combo incorrect')
     
     return render(request, 'assets/login.html')
 
