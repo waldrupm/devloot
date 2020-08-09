@@ -20,7 +20,7 @@
             <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-accent-yellow focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="{% url 'assets:home' %}">Browse</a>
             <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-accent-yellow focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                href="#">Featured</a>
+                href="{% url 'assets:featured' %}">Featured</a>
             <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-accent-yellow focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="#">Contributor Packs</a>
             {% if user.is_authenticated %}

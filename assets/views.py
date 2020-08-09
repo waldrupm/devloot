@@ -58,3 +58,9 @@ def loginPage(request):
 def logoutPage(request):
     logout(request)
     return redirect('assets:home')
+
+
+def featured_set(request):
+    current_feature = FeaturedSet.objects.filter(status='active').first()
+
+    return render(request, 'assets/featured_set.html', {'current_feature': current_feature})

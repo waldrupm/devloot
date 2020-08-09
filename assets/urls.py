@@ -9,5 +9,6 @@ urlpatterns = [
     path('logout/', views.logoutPage, name='logout'),
     
     path("", views.AssetList.as_view(), name="home"),
+    path("featured/", views.featured_set, name='featured'),
     path("asset/<int:pk>", views.AssetDetail.as_view(), name="AssetDetail"),
 ]

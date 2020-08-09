@@ -70,6 +70,7 @@ class FeaturedSet(models.Model):
         ('building', 'Building'),
     ]
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, null=True)
+    name = models.CharField(max_length=150, null=True)
     description = models.TextField(max_length=700, null=True)
     active_date = models.DateTimeField(null=True, blank=True)
     creation_date = models.DateTimeField(auto_now_add=True, null=True)
